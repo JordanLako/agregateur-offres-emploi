@@ -43,7 +43,33 @@ Puis remplissez `.env` :
 
 `jobagg --list-sources` affiche l'état de chaque source.
 
-## Utilisation
+## Version web
+
+```bash
+jobagg-web
+```
+
+Le navigateur s'ouvre sur <http://localhost:8000>. Depuis cette page, vous pouvez :
+
+- saisir le poste, le lieu, le rayon, le type de contrat, l'ancienneté et le télétravail ;
+- choisir les sites interrogés (dans « Sites interrogés et options ») ;
+- suivre la réponse de chaque site en direct ;
+- filtrer les résultats par texte ou par site, et les trier ;
+- masquer les offres déjà ouvertes ;
+- garder des offres en **favoris** (onglet « Favoris ») ;
+- exporter en CSV.
+
+Les favoris, les offres vues et la dernière recherche sont gardés dans votre navigateur.
+
+Options : `--port 8080` pour changer de port, `--no-browser` pour ne pas ouvrir le navigateur, et
+`--host 0.0.0.0` pour y accéder depuis un autre appareil du même réseau (téléphone, par exemple) via
+l'adresse IP de l'ordinateur.
+
+Le serveur tourne sur **votre** ordinateur : ce sont lui et votre connexion qui interrogent les sites. Une
+page web hébergée seule ne pourrait pas le faire, car les sites d'emploi bloquent ces requêtes depuis un
+navigateur.
+
+## Ligne de commande
 
 ```bash
 jobagg "développeur python" -l Lyon
